@@ -1,0 +1,42 @@
+.container {
+  padding: 20px;
+  .wrapper_main {
+    display: flex;
+    padding-top: 10px;
+    justify-content: center;
+    input {
+      min-width: 500px;
+      font-size: larger;
+    }
+  }
+  .task_list {
+    padding: 10px;
+    counter-reset: list-counter;
+    li {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: center;
+
+      counter-increment: list-counter;
+    }
+    li::before {
+      content: counter(list-counter) ". ";
+      margin-right: 10px;
+    }
+    p {
+      padding: 10px;
+    }
+    .wrapper_title_menu {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+
+      input {
+        width: 30px;
+        height: 30px;
+        accent-color: green;
+      }
+    }
+  }
+}
